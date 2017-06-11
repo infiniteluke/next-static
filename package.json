@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Luke's personal blog",
+  "main": "index.js",
+  "repository": "git@github.com:infiniteluke/blog.git",
+  "author": "Luke Herrington <lherrington100@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "date-fns": "^1.28.5",
+    "marked": "^0.3.6",
+    "next": "beta",
+    "raw-loader": "^0.5.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "yaml-front-matter": "^3.4.0"
+  }
+}
