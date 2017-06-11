@@ -10,10 +10,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "predeploy": "yarn run export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "date-fns": "^1.28.5",
+    "gh-pages": "^1.0.0",
     "marked": "^0.3.6",
     "next": "beta",
     "raw-loader": "^0.5.1",
