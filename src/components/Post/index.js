@@ -1,23 +1,12 @@
+// @flow
+
 import React from 'react';
 import Link from 'next/link';
 import { distanceInWordsToNow } from 'date-fns';
 import renderMarkup from '../../lib/renderMarkup';
+import { Post } from '../../../types/post';
 
-export default ({
-  title,
-  author,
-  date,
-  tags,
-  body,
-  slug,
-}: {
-  title: string,
-  author: string,
-  date: string,
-  tags: Array<string>,
-  body: string,
-  slug: string,
-}) =>
+export default ({ title, author, date, tags, body, slug }: Post) =>
   <article itemScope itemType="http://schema.org/BlogPosting">
     <header>
       <Link href={`/post/?post=${slug}`} as={`/post/${slug}`}>

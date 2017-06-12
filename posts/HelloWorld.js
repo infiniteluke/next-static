@@ -1,8 +1,10 @@
+// @flow
+
 module.exports = {
   title: 'My First Post',
   slug: 'hello-world',
   author: 'Luke H',
-  date: new Date('2017-6-10 15:00 PDT'),
+  date: new Date('2017-6-10 15:00 PDT').toString(),
   tags: ['blog', 'first post'],
   body: `
   ## Wow
