@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "predeploy": "yarn run export && touch out/.nojekyll",
+    "predeploy": "yarn run export && touch out/.nojekyll && echo \"lukeherrington.com\" > out/CNAME",
     "deploy": "gh-pages -d out",
     "lint": "eslint .",
     "flow": "flow",
