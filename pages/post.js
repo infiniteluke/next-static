@@ -1,13 +1,16 @@
+// @flow
+
 import React from 'react';
 import Link from 'next/link';
 import Post from '../src/components/Post';
 import posts from '../posts';
+import { Request } from '../types/request';
 
-export default ({ url: { query: { post } } }) => {
+export default ({ url: { query: { post } } }: Request) => {
   const id = posts.findIndex(p => p.slug === post);
   return (
     <div>
-      <Link href='/'><a>Home</a></Link>
+      <Link href="/"><a>Home</a></Link>
       <Post
         title={posts[id].title}
         slug={posts[id].slug}

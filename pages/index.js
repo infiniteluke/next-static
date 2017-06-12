@@ -1,11 +1,13 @@
+// @flow
+
 import React from 'react';
 import Post from '../src/components/Post';
 import posts from '../posts';
 
-export default () => (
+export default () =>
   <div>
     <h1>My Blog</h1>
-    {posts.map(post => (
+    {posts.map(post =>
       <Post
         key={post.slug}
         title={post.title}
@@ -15,6 +17,5 @@ export default () => (
         body={post.body}
         tags={post.tags}
       />
-    ))}
-  </div>
-);
+    )}
+  </div>;

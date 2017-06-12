@@ -1,15 +1,18 @@
+// @flow
+
 import React from 'react';
 import Link from 'next/link';
 import Post from '../src/components/Post';
 import posts from '../posts';
+import { Request } from '../types/request';
 
-export default ({ url: { query: { tag } } }) => (
+export default ({ url: { query: { tag } } }: Request) =>
   <div>
-    <Link href='/'><a>Home</a></Link>
+    <Link href="/"><a>Home</a></Link>
     <h1>{tag}</h1>
     {posts
       .filter(post => post.tags.includes(tag))
-      .map(post => (
+      .map(post =>
         <Post
           key={post.slug}
           title={post.title}
@@ -19,7 +22,5 @@ export default ({ url: { query: { tag } } }) => (
           body={post.body}
           tags={post.tags}
         />
-      ))
-    }
-  </div>
-);
+      )}
+  </div>;
