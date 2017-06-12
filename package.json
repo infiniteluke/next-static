@@ -1,9 +1,9 @@
 {
-  "name": "blog",
+  "name": "next-static",
   "version": "1.0.0",
-  "description": "Luke's personal blog",
+  "description": "A simple static blog powered by next.js",
   "main": "index.js",
-  "repository": "git@github.com:infiniteluke/blog.git",
+  "repository": "git@github.com:infiniteluke/next-static.git",
   "author": "Luke Herrington <lherrington100@gmail.com>",
   "license": "MIT",
   "scripts": {
