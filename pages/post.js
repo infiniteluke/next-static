@@ -6,18 +6,18 @@ import Post from '../src/components/Post';
 import posts from '../posts';
 import { Request } from '../types/request';
 
-export default ({ url: { query: { post } } }: Request) => {
-  const id = posts.findIndex(p => p.slug === post);
+export default ({ url: { query: { post: slug } } }: Request) => {
+  const post = posts.find(p => p.slug === slug);
   return (
     <div>
       <Link href="/"><a>Home</a></Link>
       <Post
-        title={posts[id].title}
-        slug={posts[id].slug}
-        date={posts[id].date}
-        author={posts[id].author}
-        body={posts[id].body}
-        tags={posts[id].tags}
+        title={post.title}
+        slug={post.slug}
+        date={post.date}
+        author={post.author}
+        body={post.body}
+        tags={post.tags}
       />
     </div>
   );

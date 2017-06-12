@@ -10,7 +10,7 @@ import { Post } from '../../../types/post';
 export default ({ title, author, date, tags, body, slug }: Post) =>
   <article itemScope itemType="http://schema.org/BlogPosting">
     <header>
-      <Link href={`/post/?post=${slug}`} as={`/post/${slug}`}>
+      <Link href={`/post?post=${slug}`} as={`/post/${slug}`}>
         <a><h1 itemProp="headline">{title}</h1></a>
       </Link>
       <p>

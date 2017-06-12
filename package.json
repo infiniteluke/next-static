@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "date-fns": "^1.28.5",
+    "express": "^4.15.3",
     "gh-pages": "^1.0.0",
     "marked": "^0.3.6",
     "next": "beta",
