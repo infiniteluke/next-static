@@ -1,8 +1,10 @@
 const posts = require('./posts');
 
 const getParams = (page, value) => {
-  return { page: `/${page}`, query: { [page]: value.replace(/\s+/g, '-').toLowerCase() } };
+  return { page: `/${page}`, query: { [page]: spaceReplace(value) } };
 }
+
+const spaceReplace = (string) => string.replace(/\s+/g, '-').toLowerCase();
 
 const buildPagePaths = (
   blogPosts,
@@ -14,7 +16,7 @@ const buildPagePaths = (
     const postRoutes = Object.assign(routes, { [`post/${post.slug}`]: getParams('post', post.slug) });
     const tags = post.tags || [];
     return tags
-      .reduce((acc, tag, index) => Object.assign({ [`tag/${tag}`]: getParams('tag', tag) }, acc), postRoutes)
+      .reduce((acc, tag, index) => Object.assign({ [`tag/${spaceReplace(tag)}`]: getParams('tag', tag) }, acc), postRoutes)
   }, defaultRoutes);
 }
 
