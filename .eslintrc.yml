@@ -1,11 +1,11 @@
 parser: babel-eslint
 plugins:
   - prettier
-  - flowtype
 extends:
   - airbnb
   - prettier
   - prettier/react
+  - prettier/flowtype
 env:
   es6: true
   browser: true
