@@ -15,7 +15,7 @@
     "deploy": "gh-pages -t -d out",
     "lint": "eslint .",
     "flow": "flow",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged && yarn run lint && yarn run flow"
   },
   "dependencies": {
     "date-fns": "^1.28.5",
