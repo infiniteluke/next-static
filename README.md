@@ -23,7 +23,7 @@ module.exports =  {
   title: 'Title',
   slug: 'slug',
   author: 'Your Name',
-  date: new Date(),
+  date: new Date().toString(),
   tags: [
     'tags',
     'go here'
