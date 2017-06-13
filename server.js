@@ -14,7 +14,7 @@ app.prepare().then(() => {
       post: req.params.slug,
     })
   );
-  // custom route for posts
+  // custom route for tags
   server.get('/tag/:slug', (req, res) =>
     app.render(req, res, '/tag', {
       tag: req.params.slug,
