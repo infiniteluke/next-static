@@ -7,7 +7,7 @@ export default (Page, title) => ({ ...props }) =>
   <ThemeProvider theme={config.theme.colors}>
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{`${config.siteName} - ${title}`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"

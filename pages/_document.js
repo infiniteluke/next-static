@@ -3,7 +3,6 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import config from '../config';
 
 export default class MyDocument extends Document {
   render() {
@@ -13,7 +12,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-US">
         <Head>
-          <title>{config.siteName}</title>
           {styleTags}
         </Head>
         <body>
