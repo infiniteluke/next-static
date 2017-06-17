@@ -47,7 +47,7 @@
     "prettier": "^1.4.4"
   },
   "lint-staged": {
-    "*.js": [
+    "**/*.js": [
       "prettier --single-quote --trailing-comma es5 --write",
       "git add"
     ]
