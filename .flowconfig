@@ -1,10 +1,7 @@
 [ignore]
 .*/node_modules/mitt/.*
 .*/node_modules/babel-plugin-transform-react-remove-prop-types/.*
-
-[include]
-
+.*/node_modules/styled-components/.*
 [libs]
 /types
-
-[options]
+/flow-typed

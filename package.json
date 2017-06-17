@@ -18,6 +18,7 @@
     "precommit": "lint-staged && yarn run lint && yarn run flow"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.1.4",
     "date-fns": "^1.28.5",
     "express": "^4.15.3",
     "gh-pages": "^1.0.0",
@@ -26,6 +27,8 @@
     "raw-loader": "^0.5.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "styled-components": "^2.1.0",
+    "styled-components-theme": "^1.0.5",
     "yaml-front-matter": "^3.4.0"
   },
   "devDependencies": {
