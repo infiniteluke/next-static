@@ -3,39 +3,52 @@
 
 import React from 'react';
 import Link from 'next/link';
+import styled from 'styled-components';
 import { distanceInWordsToNow } from 'date-fns';
 import renderMarkup from '../../lib/renderMarkup';
-import { Post } from '../../../types/post';
+import { type Post } from '../../../types/post';
+import config from '../../../config';
+
+const BlogPost = styled.article`
+  background: ${config.theme.colors.main};
+  pre[class*=language-] {
+    ${'' /* padding: 0; */}
+  }
+`;
 
 export default ({ title, author, date, tags, body, slug }: Post) =>
-  <article itemScope itemType="http://schema.org/BlogPosting">
+  <BlogPost itemScope itemType="http://schema.org/BlogPosting" className="post">
     <header>
       <Link href={`/post?post=${slug}`} as={`/post/${slug}`}>
-        <a><h1 itemProp="headline">{title}</h1></a>
+        <a><h1 itemProp="headline" className="post--title">{title}</h1></a>
       </Link>
-      <p>
-        <time itemProp="datePublished" dateTime={date}>
-          {distanceInWordsToNow(date)}
-        </time>
-      </p>
-      <p><span itemProp="author">{author}</span></p>
+      <footer className="post--info">
+        <span>
+          <time itemProp="datePublished" dateTime={date}>
+            {distanceInWordsToNow(date, { addSuffix: true })}
+          </time>
+        </span>
+        <span itemProp="author">{author}</span>
+      </footer>
     </header>
-    <span dangerouslySetInnerHTML={{ __html: renderMarkup(body) }} />
+    <div
+      className="post--body"
+      dangerouslySetInnerHTML={{ __html: renderMarkup(body) }}
+    />
     <footer>
-      <ul>
-
-        {tags.map(tag =>
-          <small key={tag} itemProp="keywords">
-            <li>
-              <Link
-                href={`/tag?tag=${tag}`}
-                as={`/tag/${tag.replace(/\s+/g, '-').toLowerCase()}`}
-              >
-                <a>{tag}</a>
-              </Link>
-            </li>
-          </small>
+      <small className="post--tags">
+        <span>Filed under: </span>
+        {tags.map((tag, index) =>
+          <span key={tag} itemProp="keywords" className="post--tag">
+            <Link
+              href={`/tag?tag=${tag}`}
+              as={`/tag/${tag.replace(/\s+/g, '-').toLowerCase()}`}
+            >
+              <a>{tag}</a>
+            </Link>
+            {index !== tags.length - 1 ? ', ' : ''}
+          </span>
         )}
-      </ul>
+      </small>
     </footer>
-  </article>;
+  </BlogPost>;

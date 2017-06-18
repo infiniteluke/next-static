@@ -7,11 +7,23 @@ module.exports = {
   date: new Date('2017-6-10 15:00 PDT').toString(),
   tags: ['blog', 'first post'],
   body: `
-  ## Wow
-  This is a _cool_ post.
+  ## Hello World
+  This is an _example_ post that has some text that wraps. Simply use markdown to write your posts.
+  
+  ## How to add code to a post
+  Make sure to escape the backticks when writing code in you posts.
+  
   Here's some code:
+  \`\`\`jsx
+  const a = <Post>{props.dope}</Post>;
   \`\`\`
-  const a = 'thing';
-  \`\`\`
+  
+  ## GFM Supported
+  Anything that works in Github, works here:
+  
+  | First Header  | Second Header |
+  | ------------- | ------------- |
+  | Content Cell  | Content Cell  |
+  | Content Cell  | Content Cell  |
   `,
 };

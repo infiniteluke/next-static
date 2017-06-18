@@ -1,12 +1,15 @@
 // @flow
 
-import React from 'react';
+import React, { type Element } from 'react';
 import Link from 'next/link';
 import Post from '../src/components/Post';
 import posts from '../posts';
-import { Request } from '../types/request';
+import { type Request } from '../types/request';
+import Layout from '../src/components/Layout';
 
-export default ({ url: { query: { post: slug } } }: Request) => {
+export default Layout(({ url: { query: { post: slug } } }: Request): Element<
+  *
+> => {
   const post = posts.find(p => p.slug === slug);
   return (
     <div>
@@ -21,4 +24,4 @@ export default ({ url: { query: { post: slug } } }: Request) => {
       />
     </div>
   );
-};
+}, 'Post');
