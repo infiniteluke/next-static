@@ -29,7 +29,6 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "styled-components": "^2.1.0",
-    "styled-components-theme": "^1.0.5",
     "yaml-front-matter": "^3.4.0"
   },
   "devDependencies": {
