@@ -1,11 +1,21 @@
-import React from 'react';
+// @flow
+
+import React, { type Element } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import config from '../../../config';
+import Footer from '../Footer';
+import Header from '../Header';
+import { type Request } from '../../../types/request';
+import Layouts from '../../layouts';
 
-export default (Page, title) => ({ ...props }) =>
+const Cool = Layouts[config.layout];
+
+export default (Page: (props: Request) => Element<*>, title: string) => ({
+  ...props
+}: Request) =>
   <ThemeProvider theme={config.theme.colors}>
-    <div>
+    <Cool>
       <Head>
         <title>{`${config.siteName} - ${title}`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -14,8 +24,10 @@ export default (Page, title) => ({ ...props }) =>
           rel="stylesheet"
         />
       </Head>
-      <main>
+      <Header />
+      <main className="main">
         <Page {...props} />
       </main>
-    </div>
+      <Footer className="footer" />
+    </Cool>
   </ThemeProvider>;

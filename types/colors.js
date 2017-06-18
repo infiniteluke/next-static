@@ -1,7 +1,5 @@
 // @flow
 
-export type Colors = {|
-  main: string,
-  dark: string,
-  light: string,
-|};
+export type Colors = {
+  [color: string]: mixed,
+};

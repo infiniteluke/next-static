@@ -5,6 +5,7 @@ import { type Layout } from './layout';
 
 export type Config = {|
   +siteName: string,
+  +slogan: string,
   +layout: Layout,
   +theme: Theme,
 |};

@@ -32,7 +32,7 @@ module.exports =  {
   ## Post
   Use markdown to _write_ your post
   Here's some code:
-  \`\`\`
+  \`\`\`javascript
   const a = 'thing';
   \`\`\`
   `

@@ -12,6 +12,10 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-US">
         <Head>
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"
+          />
           {styleTags}
         </Head>
         <body>

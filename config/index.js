@@ -3,7 +3,8 @@
 import { type Config } from '../types/config';
 
 const config: Config = {
-  siteName: 'My Site',
+  siteName: 'Next Static Blog',
+  slogan: '✨ Start static then go server rendered when you need to ✨',
   layout: 'centered',
   theme: {
     colors: {
