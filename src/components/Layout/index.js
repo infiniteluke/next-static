@@ -1,12 +1,13 @@
 // @flow
 
-import React, { type Element } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
 import config from '../../../config';
 import Footer from '../Footer';
 import Header from '../Header';
 import { type Request } from '../../../types/request';
+import { type NextPage } from '../../../types/next';
 import Layouts from '../../layouts';
 import theme from '../../lib/theme';
 
@@ -25,9 +26,7 @@ const Theme = styled.div`
   }
 `;
 
-export default (Page: (props: Request) => Element<*>, title: string) => ({
-  ...props
-}: Request) =>
+export default (Page: NextPage, title: string) => ({ ...props }: Request) =>
   <ThemeProvider theme={config.theme.colors}>
     <Layout>
       <Theme>
