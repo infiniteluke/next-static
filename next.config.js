@@ -1,3 +1,4 @@
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const posts = require('./posts');
 
 const spaceReplace = string => string.replace(/\s+/g, '-').toLowerCase();
@@ -29,3 +30,18 @@ const buildPagePaths = (
   }, defaultRoutes);
 
 exports.exportPathMap = () => buildPagePaths(posts);
+
+exports.webpack = config => {
+  config.plugins.push(
+    new SWPrecacheWebpackPlugin({
+      verbose: true,
+      staticFileGlobsIgnorePatterns: [/\.next\//],
+      runtimeCaching: [
+        {
+          handler: 'networkFirst',
+          urlPattern: /^https?.*/,
+        },
+      ],
+    })
+  );
+};
