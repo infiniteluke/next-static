@@ -3,12 +3,19 @@
 import styled from 'styled-components';
 
 const space = 30;
+const medium = '700px';
 
 export default styled.div`
+  a {
+    text-decoration: none;
+  }
+
   .header {
     text-align: center;
-    margin: ${space}px 0;
+    padding: ${space}px ${space / 2}px;
     h1 {
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 1px;
       margin: 0 0 ${space / 2}px 0;
       font-size: 3rem;
     }
@@ -19,17 +26,25 @@ export default styled.div`
   
   main {
     max-width: 500px;
-    margin: 0 auto;
+    @media (min-width: ${medium}) {
+      max-width: 700px;
+    }
+    margin: ${space}px auto;
+  }
+  
+  .home-link {
+    margin-left: ${space}px;
   }
   
   .footer {
-    margin: ${space}px;
+    padding: ${space}px;
     text-align: center;
   }
   
   .post {
     margin: ${space / 2}px ${space}px ${space}px;
     h1 {
+      display: inline-block;
       margin: 0;
     }
   }

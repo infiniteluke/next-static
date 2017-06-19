@@ -8,9 +8,10 @@ const config: Config = {
   layout: 'centered',
   theme: {
     colors: {
-      main: 'white',
-      dark: 'white',
-      light: 'white',
+      main: '#24292E',
+      dark: '#3F4448',
+      light: '#FAFBFC',
+      accent: '#0366D6',
     },
   },
 };

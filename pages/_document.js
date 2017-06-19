@@ -23,6 +23,10 @@ export default class MyDocument extends Document {
             {main}
           </div>
           <NextScript />
+          <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+          />
         </body>
       </html>
     );

@@ -13,7 +13,7 @@ export default Layout(({ url: { query: { post: slug } } }: Request): Element<
   const post = posts.find(p => p.slug === slug);
   return (
     <div>
-      <Link href="/"><a>Home</a></Link>
+      <Link href="/"><a className="home-link">Home</a></Link>
       <Post
         title={post.title}
         slug={post.slug}

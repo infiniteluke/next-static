@@ -3,21 +3,12 @@
 
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
 import { distanceInWordsToNow } from 'date-fns';
 import renderMarkup from '../../lib/renderMarkup';
 import { type Post } from '../../../types/post';
-import config from '../../../config';
-
-const BlogPost = styled.article`
-  background: ${config.theme.colors.main};
-  pre[class*=language-] {
-    ${'' /* padding: 0; */}
-  }
-`;
 
 export default ({ title, author, date, tags, body, slug }: Post) =>
-  <BlogPost itemScope itemType="http://schema.org/BlogPosting" className="post">
+  <article itemScope itemType="http://schema.org/BlogPosting" className="post">
     <header>
       <Link href={`/post?post=${slug}`} as={`/post/${slug}`}>
         <a><h1 itemProp="headline" className="post--title">{title}</h1></a>
@@ -51,4 +42,4 @@ export default ({ title, author, date, tags, body, slug }: Post) =>
         )}
       </small>
     </footer>
-  </BlogPost>;
+  </article>;
