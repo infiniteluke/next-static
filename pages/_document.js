@@ -12,11 +12,11 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-US">
         <Head>
-          <link
-            rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"
-          />
           {styleTags}
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
         </Head>
         <body>
           <div className="root">
@@ -25,6 +25,14 @@ export default class MyDocument extends Document {
           <NextScript />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"
+          />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
             rel="stylesheet"
           />
         </body>
