@@ -4,11 +4,54 @@
 import React from 'react';
 import Link from 'next/link';
 import { distanceInWordsToNow } from 'date-fns';
+import styled from 'styled-components';
 import renderMarkup from '../../lib/renderMarkup';
 import { type Post } from '../../../types/post';
+import theme from '../../lib/theme';
+
+const Article = styled.article`
+  table {
+    border-collapse: collapse;
+  }
+  table th {
+    background-color: ${theme.accent};
+    color: ${theme.light};
+  }
+  table, th, td {
+     border: 1px solid black;
+  }
+  th, td {
+    padding: 10px;
+  }
+  blockquote {
+    margin: 2.2rem 20px;
+    padding: 1rem 10px;
+    border-left: 10px solid ${theme.dark.lighten(1.5)};
+    background: ${theme.light};
+    p {
+      font-size: 1.4rem;
+      margin: 0;
+      display: inline;
+      quotes: "\\201C""\\201D""\\2018""\\2019";
+    }
+    p:before {
+      font-size: 5rem;
+      font-family: Georgia, serif;
+      color: ${theme.dark.lighten(1.5)};
+      content: open-quote;
+      line-height: 0.3rem;
+      margin-right: 0.8rem;
+      vertical-align: -0.4em;
+    }
+    p:after {
+      content: close-quote;
+      visibility: hidden;
+    }
+  }
+`;
 
 export default ({ title, author, date, tags, body, slug }: Post) =>
-  <article itemScope itemType="http://schema.org/BlogPosting" className="post">
+  <Article itemScope itemType="http://schema.org/BlogPosting" className="post">
     <header>
       <Link href={`/post?post=${slug}`} as={`/post/${slug}`}>
         <a><h1 itemProp="headline" className="post--title">{title}</h1></a>
@@ -42,4 +85,4 @@ export default ({ title, author, date, tags, body, slug }: Post) =>
         )}
       </small>
     </footer>
-  </article>;
+  </Article>;

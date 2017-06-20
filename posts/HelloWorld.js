@@ -25,5 +25,7 @@ module.exports = {
   | ------------- | ------------- |
   | Content Cell  | Content Cell  |
   | Content Cell  | Content Cell  |
+  
+  > This is a quote. This is a quote. This is a quote. This is a quote. This is a quote. This is a quote. This is a quote. This is a quote.
   `,
 };
