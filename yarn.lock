@@ -4248,6 +4248,10 @@ styled-jsx@1.0.4:
     string-hash "1.1.1"
     stylis "3.0.15"
 
+styled-normalize@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/styled-normalize/-/styled-normalize-2.0.0.tgz#60db3dc11ba8481a7c5ef7af5072c9e224705ea3"
+
 stylis@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-2.0.0.tgz#6785a6546bd73478799a67d49d67086953b50ad5"

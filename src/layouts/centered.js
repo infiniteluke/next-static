@@ -14,7 +14,6 @@ export default styled.div`
     text-align: center;
     padding: ${space}px ${space / 2}px;
     h1 {
-      font-family: 'Roboto', sans-serif;
       letter-spacing: 1px;
       margin: 0 0 ${space / 2}px 0;
       font-size: 3rem;

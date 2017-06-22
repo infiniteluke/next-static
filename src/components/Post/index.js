@@ -18,16 +18,14 @@ const Article = styled.article`
     color: ${theme.light};
   }
   table, th, td {
-     border: 1px solid black;
+     border: 1px solid ${theme.dark};
   }
   th, td {
     padding: 10px;
   }
   blockquote {
-    margin: 2.2rem 20px;
+    margin: 1.8rem 20px;
     padding: 1rem 10px;
-    border-left: 10px solid ${theme.dark.lighten(1.5)};
-    background: ${theme.light};
     p {
       font-size: 1.4rem;
       margin: 0;
