@@ -14,6 +14,7 @@ import theme from '../../lib/theme';
 const Layout = Layouts[config.layout];
 
 const Theme = styled.div`
+  font-family: sans-serif;
   color: ${theme.main};
   a {
     color: ${theme.accent}
