@@ -1,2 +1,2 @@
 // @flow
-export type Layout = 'centered';
+export type Layout = 'none' | 'centered';

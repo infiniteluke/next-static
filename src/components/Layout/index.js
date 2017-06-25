@@ -11,7 +11,7 @@ import { type NextPage } from '../../../types/next';
 import Layouts from '../../layouts';
 import theme from '../../lib/theme';
 
-const Layout = Layouts[config.layout];
+const Layout = Layouts[config.layout || 'none'];
 
 const Theme = styled.div`
   font-family: sans-serif;
