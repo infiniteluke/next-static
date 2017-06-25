@@ -12,7 +12,7 @@ export default styled.div`
 
   .header {
     text-align: center;
-    padding: ${space}px ${space / 2}px;
+    padding: ${space * 2}px ${space / 2}px;
     h1 {
       letter-spacing: 1px;
       margin: 0 0 ${space / 2}px 0;

@@ -9,7 +9,7 @@ import Header from '../Header';
 import { type Request } from '../../../types/request';
 import { type NextPage } from '../../../types/next';
 import Layouts from '../../layouts';
-import theme from '../../lib/theme';
+import theme, { defaultColors } from '../../lib/theme';
 
 const Layout = Layouts[config.layout || 'none'];
 
@@ -28,7 +28,7 @@ const Theme = styled.div`
 `;
 
 export default (Page: NextPage, title: string) => ({ ...props }: Request) =>
-  <ThemeProvider theme={config.theme.colors}>
+  <ThemeProvider theme={config.theme ? config.theme.colors : defaultColors}>
     <Layout>
       <Theme>
         <Head>

@@ -7,5 +7,5 @@ export type Config = {|
   +siteName: string,
   +slogan: string,
   +layout?: Layout,
-  +theme: Theme,
+  +theme?: Theme,
 |};

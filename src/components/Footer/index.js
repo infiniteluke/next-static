@@ -7,6 +7,9 @@ import theme from '../../lib/theme';
 const Footer = styled.header`
   background-color: ${theme.main};
   color: ${theme.light.lighten(0.3)};
+  a, a:visited {
+    color: ${theme.light.lighten(0.3)};
+  }
 `;
 
 export default () =>
