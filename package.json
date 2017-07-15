@@ -13,7 +13,7 @@
     "export": "next build && next export",
     "predeploy": "yarn run export && touch out/.nojekyll && echo \"lukeherrington.com\" > out/CNAME",
     "deploy": "gh-pages -t -d out",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "flow": "flow",
     "precommit": "lint-staged && yarn run lint && yarn run flow"
   },
@@ -24,6 +24,7 @@
     "gh-pages": "^1.0.0",
     "marked": "^0.3.6",
     "next": "beta",
+    "preval.macro": "^1.0.1",
     "prismjs": "^1.6.0",
     "raw-loader": "^0.5.1",
     "react": "^15.5.4",
@@ -34,7 +35,9 @@
     "yaml-front-matter": "^3.4.0"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
+    "babel-macros": "^0.5.2",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.1.1",

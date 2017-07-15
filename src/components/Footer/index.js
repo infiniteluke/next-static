@@ -7,7 +7,8 @@ import theme from '../../lib/theme';
 const Footer = styled.header`
   background-color: ${theme.main};
   color: ${theme.light.lighten(0.3)};
-  a, a:visited {
+  a,
+  a:visited {
     color: ${theme.light.lighten(0.3)};
   }
 `;
@@ -15,9 +16,16 @@ const Footer = styled.header`
 export default () =>
   <Footer className="footer">
     <small className="footer--madeWith">
-      Made with <span role="img" aria-label="love">❤️</span> and{' '}
+      Made with{' '}
+      <span role="img" aria-label="love">
+        ❤️
+      </span>{' '}
+      and{' '}
       <a href="https://github.com/infiniteluke/next-static">
-        Next Static <span role="img" aria-label="with extra sparkles">✨</span>
+        Next Static{' '}
+        <span role="img" aria-label="with extra sparkles">
+          ✨
+        </span>
       </a>
     </small>
   </Footer>;

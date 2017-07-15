@@ -17,13 +17,13 @@ const Theme = styled.div`
   font-family: sans-serif;
   color: ${theme.main};
   a {
-    color: ${theme.accent}
+    color: ${theme.accent};
   }
   a:hover {
-    color: ${theme.accent.lighten(0.2)}
+    color: ${theme.accent.lighten(0.2)};
   }
   a:visited {
-    color: ${theme.accent.darken(0.2)}
+    color: ${theme.accent.darken(0.2)};
   }
 `;
 

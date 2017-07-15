@@ -13,6 +13,10 @@ const Header = styled.header`
 
 export default () =>
   <Header className="header">
-    <h1 className="header--siteName">{config.siteName}</h1>
-    <div className="header--slogan">{config.slogan}</div>
+    <h1 className="header--siteName">
+      {config.siteName}
+    </h1>
+    <div className="header--slogan">
+      {config.slogan}
+    </div>
   </Header>;

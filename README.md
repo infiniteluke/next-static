@@ -16,27 +16,23 @@ A simple static blog powered by [next.js](https://github.com/zeit/next.js).
 * `now`
 
 ### Adding a Post
-* Create a `.js` file in `posts`.
-* Export an object that contains post content/metadata
-```js
-module.exports =  {
-  title: 'Title',
-  slug: 'slug',
-  author: 'Your Name',
-  date: new Date().toString(),
-  tags: [
-    'tags',
-    'go here'
-  ],
-  body: `
-  ## Post
-  Use markdown to _write_ your post
-  Here's some code:
-  \`\`\`javascript
-  const a = 'thing';
-  \`\`\`
-  `
-};
+* Create a `.md` file in `posts`.
+* Add front matter separated by `---` and the body of the post in markdown below:
+```yaml
+---
+title: Title
+slug: slug
+author: Your Name
+date: 2017-6-10 15:00 PDT
+tags:
+  - tags
+  - go here
+---
+## Post
+Use markdown to _write_ your post
+Here's some code:
+\`\`\`javascript
+const a = 'thing';
+\`\`\`
 ```
-* Inside `./posts/index.js` require your new post and add it to the exported array.
 * Re-run `yarn run export` to build your new site.

@@ -20,10 +20,13 @@ const Article = styled.article`
     background-color: ${theme.accent};
     color: ${theme.light};
   }
-  table, th, td {
-     border: 1px solid ${theme.dark};
+  table,
+  th,
+  td {
+    border: 1px solid ${theme.dark};
   }
-  th, td {
+  th,
+  td {
     padding: 10px;
   }
   blockquote {
@@ -55,7 +58,11 @@ export default ({ title, author, date, tags, body, slug }: Post) =>
   <Article itemScope itemType="http://schema.org/BlogPosting" className="post">
     <header>
       <Link href={`/post?post=${slug}`} as={`/post/${slug}`}>
-        <a><h1 itemProp="headline" className="post--title">{title}</h1></a>
+        <a>
+          <h1 itemProp="headline" className="post--title">
+            {title}
+          </h1>
+        </a>
       </Link>
       <footer className="post--info">
         <span>
@@ -63,7 +70,9 @@ export default ({ title, author, date, tags, body, slug }: Post) =>
             {distanceInWordsToNow(date, { addSuffix: true })}
           </time>
         </span>
-        <span itemProp="author">{author}</span>
+        <span itemProp="author">
+          {author}
+        </span>
       </footer>
     </header>
     <div
@@ -79,7 +88,9 @@ export default ({ title, author, date, tags, body, slug }: Post) =>
               href={`/tag?tag=${tag}`}
               as={`/tag/${tag.replace(/\s+/g, '-').toLowerCase()}`}
             >
-              <a>{tag}</a>
+              <a>
+                {tag}
+              </a>
             </Link>
             {index !== tags.length - 1 ? ', ' : ''}
           </span>
