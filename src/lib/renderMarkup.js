@@ -8,6 +8,8 @@ const langPrefix = 'language-';
 
 // prettier-ignore
 renderer.code = (code, language) => `<pre class="${langPrefix}${language}"><code class="${langPrefix}${language}">${Prism.highlight(code, Prism.languages[language])}</code></pre>`;
+renderer.table = (header, body) =>
+  `<div class="table-wrapper"><table>${header}${body}</table></div>`;
 
 marked.setOptions({
   gfm: true,

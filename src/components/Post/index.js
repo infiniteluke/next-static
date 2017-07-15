@@ -10,6 +10,9 @@ import { type Post } from '../../../types/post';
 import theme from '../../lib/theme';
 
 const Article = styled.article`
+  .table-wrapper {
+    overflow-x: auto;
+  }
   table {
     border-collapse: collapse;
   }
