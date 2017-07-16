@@ -1,4 +1,4 @@
-const posts = require('./getPosts');
+const posts = require('./src/lib/getPosts');
 
 const spaceReplace = string => string.replace(/\s+/g, '-').toLowerCase();
 

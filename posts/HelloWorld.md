@@ -14,9 +14,9 @@ This is an _example_ post that has some text that wraps. Simply use markdown to 
 Make sure to escape the backticks when writing code in you posts.
 
 Here's some code:
-\`\`\`jsx
+```jsx
 const a = <Post>{props.dope}</Post>;
-\`\`\`
+```
 
 ## GFM Supported
 Anything that works in Github, works here:
