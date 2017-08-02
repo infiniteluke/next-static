@@ -9,6 +9,14 @@ A simple static blog powered by [next.js](https://github.com/zeit/next.js).
 * I found other SSG (Static Site Generator) to be too much for what I need
 * I wanted to be able to transition to a dynamic site easily if need be and next.js is a great existing SSR (Server Side Render) framework.
 
+### Getting Started
+* Clone this repo
+* `yarn`
+* Edit `config/index.js` to your liking. 
+  * Get the best experience with config by adding a plugin to your text editor that will surface flow errors. This will ensure you're providing the expected types for your config values.
+* `yarn dev`
+* Write! 📝
+
 ### Writting
 * Create a `.md` file in `posts`.
 * Add front matter separated by `---` and the body of the post in markdown below:

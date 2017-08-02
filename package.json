@@ -43,7 +43,7 @@
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-prettier": "2.1.1",
     "eslint-plugin-react": "7.0.1",
-    "flow-bin": "0.47.0",
+    "flow-bin": "^0.51.1",
     "husky": "^0.13.4",
     "lint-staged": "^3.6.1",
     "nodemon": "^1.11.0",
