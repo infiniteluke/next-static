@@ -3,7 +3,7 @@
 import React from 'react';
 import Post from '../src/components/Post';
 import Layout from '../src/components/Layout';
-import posts from '../src/lib/posts';
+import posts from '../posts';
 
 export default Layout(
   () =>

@@ -7,7 +7,7 @@ tags:
   - blog
   - first post
 ---
-## Hello hahah
+## Hello
 This is an _example_ post that has some text that wraps. Simply use markdown to write your posts.
 
 ## How to add code to a post

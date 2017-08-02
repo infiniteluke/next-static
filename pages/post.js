@@ -3,7 +3,7 @@
 import React, { type Element } from 'react';
 import Link from 'next/link';
 import Post from '../src/components/Post';
-import posts from '../src/lib/posts';
+import posts from '../posts';
 import { type Request } from '../types/request';
 import Layout from '../src/components/Layout';
 

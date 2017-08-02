@@ -4,7 +4,6 @@
     "flow"
   ],
   "plugins": [
-    "babel-macros",
     ["styled-components", { "ssr": true, "displayName": true, "preprocess": false } ],
     "transform-flow-strip-types"
   ]

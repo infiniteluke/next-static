@@ -9,13 +9,7 @@ A simple static blog powered by [next.js](https://github.com/zeit/next.js).
 * I found other SSG (Static Site Generator) to be too much for what I need
 * I wanted to be able to transition to a dynamic site easily if need be and next.js is a great existing SSR (Server Side Render) framework.
 
-## Usage
-* `yarn`
-* `yarn run export`
-* `cd out`
-* `now`
-
-### Adding a Post
+### Writting
 * Create a `.md` file in `posts`.
 * Add front matter separated by `---` and the body of the post in markdown below:
 ```yaml
@@ -35,4 +29,5 @@ Here's some code:
 const a = 'thing';
 \`\`\`
 ```
-* Re-run `yarn run export` to build your new site.
+* While writing, run `yarn dev` to see your post live reload when saved.
+* Re-run `yarn export` to build your new site.
