@@ -2,6 +2,7 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-markdown';
 import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-bash';
 
 const renderer = new marked.Renderer();
 const langPrefix = 'language-';

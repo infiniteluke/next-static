@@ -9,3 +9,7 @@ tags:
 ---
 ## Puns
 _Next_ post. Get it? _Next_? I'll let myself out...
+
+```bash
+echo $PATH
+```
