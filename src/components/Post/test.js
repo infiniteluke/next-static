@@ -1,9 +1,9 @@
 import React from 'react';
-import test from 'tape';
-import reactDom from 'react-dom/server';
+import { renderToStaticMarkup as render } from 'react-dom/server';
 import dom from 'cheerio';
 import Post from './index';
 
+// Global Test Setup
 const Component = Post;
 
 const defaultProps = {
@@ -27,23 +27,34 @@ const makeProps = ({ title, author, date, tags, body, slug } = defaultProps) =>
       slug,
     }
   );
-const render = reactDom.renderToStaticMarkup;
 
-test('<Post />', nest => {
-  nest.test('given no props', assert => {
-    const msg = `should render a post`;
+const loadComponent = el => dom.load(render(el));
 
+describe('<Post /> with no args', () => {
+  it('should render a post with default args', () => {
     const props = makeProps();
     const re = RegExp(props);
 
     const el = <Component {...props} />;
 
-    const $ = dom.load(render(el));
+    const $ = loadComponent(el);
+
     const output = $('.post').html();
     const actual = re.test(output);
     const expected = true;
 
-    assert.same(actual, expected, msg);
-    assert.end();
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('Snapshot::<Post /> with default args', () => {
+  it('should render our post', () => {
+    const props = makeProps();
+    const el = <Component {...props} />;
+
+    const $ = loadComponent(el);
+    const output = $('.post').html();
+
+    expect(output).toMatchSnapshot();
   });
 });

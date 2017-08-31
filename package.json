@@ -14,7 +14,7 @@
     "predeploy": "yarn run export && touch out/.nojekyll && echo \"lukeherrington.com\" > out/CNAME",
     "deploy": "gh-pages -t -d out",
     "lint": "eslint . --fix",
-    "test": "babel-node index.test.js",
+    "test": "jest",
     "test:watch": "watch 'clear && npm run -s test'",
     "flow": "flow",
     "precommit": "lint-staged && yarn run lint && yarn run flow"
@@ -39,6 +39,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
     "babel-plugin-styled-components": "^1.1.7",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",

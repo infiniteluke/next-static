@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot::<Post /> with default args should render our post 1`] = `
+"<p>lorem ipsum is the name making tests is this game</p>
+"
+`;

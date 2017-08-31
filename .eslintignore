@@ -2,3 +2,7 @@ out
 .next
 flow-typed
 posts
+src/**/**.test.js
+
+src/components/**/__snapshots__
+src/components/**/test.js
