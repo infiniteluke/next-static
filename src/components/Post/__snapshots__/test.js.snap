@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot::<Post /> with default args should render our post 1`] = `
-"<p>lorem ipsum is the name making tests is this game</p>
-"
+"<header><a href=\\"/post/test-post\\"><h1 itemprop=\\"headline\\" class=\\"post--title\\">Hello</h1></a><footer class=\\"post--info\\"><span><time itemprop=\\"datePublished\\" datetime=\\"7/22/2017\\">about 1 month ago</time></span><span itemprop=\\"author\\">User</span></footer></header><div class=\\"post--body\\"><p>lorem ipsum is the name making tests is this game</p>
+</div><footer><small class=\\"post--tags\\"><span>Filed under: </span><span itemprop=\\"keywords\\" class=\\"post--tag\\"><a href=\\"/tag/javascript\\">javascript</a>, </span><span itemprop=\\"keywords\\" class=\\"post--tag\\"><a href=\\"/tag/angular\\">angular</a></span></small></footer>"
 `;

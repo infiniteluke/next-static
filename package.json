@@ -16,6 +16,7 @@
     "lint": "eslint . --fix",
     "test": "jest",
     "test:watch": "watch 'clear && npm run -s test'",
+    "test:update": "npm test -- -u",
     "flow": "flow",
     "precommit": "lint-staged && yarn run lint && yarn run flow"
   },
