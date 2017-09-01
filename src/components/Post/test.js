@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToStaticMarkup as render } from 'react-dom/server';
 import dom from 'cheerio';
 import Post from './index';
-
+import renderer from 'react-test-renderer';
 // Global Test Setup
 const Component = Post;
 
@@ -47,14 +47,13 @@ describe('<Post /> with no args', () => {
   });
 });
 
-describe('Snapshot::<Post /> with default args', () => {
-  it('should render our post', () => {
+describe('Snapshot::<Post />s', () => {
+  it('should equal a snapshot of our rendered component', () => {
     const props = makeProps();
     const el = <Component {...props} />;
 
-    const $ = loadComponent(el);
-    const output = $('.post').html();
+    const tree = renderer.create(el).toJSON();
 
-    expect(output).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 });
