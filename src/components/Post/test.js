@@ -48,7 +48,7 @@ describe('<Post /> with no args', () => {
 });
 
 describe('Snapshot::<Post />s', () => {
-  it('should equal a snapshot of our rendered component', () => {
+  it('should render the contents of the component.', () => {
     const props = makeProps();
     const el = <Component {...props} />;
 

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot::<Header /> component should render the contents of the component. 1`] = `
+<header
+  className="header Header__Header-te6fwh-0 ldnsLH"
+>
+  <h1
+    className="header--siteName"
+  >
+    Next Static Blog
+  </h1>
+  <div
+    className="header--slogan"
+  >
+    ✨ Start static then go server rendered when you need to ✨
+  </div>
+</header>
+`;

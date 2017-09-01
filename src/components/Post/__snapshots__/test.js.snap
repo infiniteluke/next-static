@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot::<Post />s should equal a snapshot of our rendered component 1`] = `
+exports[`Snapshot::<Post />s should render the contents of the component. 1`] = `
 <article
   className="post Post__Article-s1eculme-0 fQItYZ"
   itemScope={true}
