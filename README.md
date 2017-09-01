@@ -1,5 +1,6 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
+[![Build Status](https://travis-ci.org/infiniteluke/next-static.svg?branch=master)](https://travis-ci.org/infiniteluke/next-static)
+[![David](https://img.shields.io/david/infiniteluke/next-static.svg)]()
 # Next Static Blog
 __✨ Start static then go server rendered when you need to ✨__
 
@@ -20,7 +21,7 @@ A simple static blog powered by [next.js](https://github.com/zeit/next.js).
 ## Writting
 * Create a `.md` file in `posts`.
 * Add front matter separated by `---` and the body of the post in markdown below:
-```yaml
+<pre lang="yaml">
 ---
 title: Title
 slug: slug
@@ -33,10 +34,10 @@ tags:
 ## Post
 Use markdown to _write_ your post
 Here's some code:
-\`\`\`javascript
+```javascript
 const a = 'thing';
-\`\`\`
 ```
+</pre>
 * While writing, run `yarn dev` to see your post live reload when saved.
 * Re-run `yarn export` to build your new site.
 
