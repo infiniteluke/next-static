@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot::<Footer /> component should render the contents of the component. 1`] = `
+<header
+  className="footer Footer__Footer-s9jqh5c-0 iaXmbF"
+>
+  <small
+    className="footer--madeWith"
+  >
+    Made with
+     
+    <span
+      aria-label="love"
+      role="img"
+    >
+      ❤️
+    </span>
+     
+    and
+     
+    <a
+      href="https://github.com/infiniteluke/next-static"
+    >
+      Next Static
+       
+      <span
+        aria-label="with extra sparkles"
+        role="img"
+      >
+        ✨
+      </span>
+    </a>
+  </small>
+</header>
+`;

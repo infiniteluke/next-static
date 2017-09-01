@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot::<Post />s should render the contents of the component. 1`] = `
+<article
+  className="post Post__Article-s1eculme-0 fQItYZ"
+  itemScope={true}
+  itemType="http://schema.org/BlogPosting"
+>
+  <header>
+    <a
+      href="/post/test-post"
+      onClick={[Function]}
+    >
+      <h1
+        className="post--title"
+        itemProp="headline"
+      >
+        Hello
+      </h1>
+    </a>
+    <footer
+      className="post--info"
+    >
+      <span>
+        <time
+          dateTime="7/22/2017"
+          itemProp="datePublished"
+        >
+          about 1 month ago
+        </time>
+      </span>
+      <span
+        itemProp="author"
+      >
+        User
+      </span>
+    </footer>
+  </header>
+  <div
+    className="post--body"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>lorem ipsum is the name making tests is this game</p>
+      ",
+      }
+    }
+  />
+  <footer>
+    <small
+      className="post--tags"
+    >
+      <span>
+        Filed under: 
+      </span>
+      <span
+        className="post--tag"
+        itemProp="keywords"
+      >
+        <a
+          href="/tag/javascript"
+          onClick={[Function]}
+        >
+          javascript
+        </a>
+        , 
+      </span>
+      <span
+        className="post--tag"
+        itemProp="keywords"
+      >
+        <a
+          href="/tag/angular"
+          onClick={[Function]}
+        >
+          angular
+        </a>
+        
+      </span>
+    </small>
+  </footer>
+</article>
+`;

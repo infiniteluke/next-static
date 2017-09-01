@@ -11,13 +11,17 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "predeploy": "yarn run export && touch out/.nojekyll && echo \"lukeherrington.com\" > out/CNAME",
+    "predeploy": "yarn export && touch out/.nojekyll && echo \"lukeherrington.com\" > out/CNAME",
     "deploy": "gh-pages -t -d out",
     "lint": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "npm test -- -u",
     "flow": "flow",
-    "precommit": "lint-staged && yarn run lint && yarn run flow"
+    "precommit": "lint-staged && yarn lint && yarn flow && yarn test"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "date-fns": "^1.28.5",
     "express": "^4.15.3",
     "gh-pages": "^1.0.0",
@@ -26,15 +30,22 @@
     "prismjs": "^1.6.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.6.1",
     "styled-components": "^2.1.0",
     "styled-components-theme": "^1.0.5",
     "styled-normalize": "^2.0.0",
     "yaml-front-matter": "^3.4.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
     "babel-plugin-styled-components": "^1.1.7",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.1.1",
@@ -45,9 +56,11 @@
     "eslint-plugin-react": "7.0.1",
     "flow-bin": "^0.51.1",
     "husky": "^0.13.4",
+    "jest": "^20.0.4",
     "lint-staged": "^3.6.1",
     "nodemon": "^1.11.0",
-    "prettier": "^1.4.4"
+    "prettier": "^1.4.4",
+    "watch": "^1.0.2"
   },
   "lint-staged": {
     "**/*.js": [
