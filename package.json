@@ -11,14 +11,14 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "predeploy": "yarn run export && touch out/.nojekyll && echo \"lukeherrington.com\" > out/CNAME",
+    "predeploy": "yarn export && touch out/.nojekyll && echo \"lukeherrington.com\" > out/CNAME",
     "deploy": "gh-pages -t -d out",
     "lint": "eslint . --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "npm test -- -u",
     "flow": "flow",
-    "precommit": "lint-staged && yarn run lint && yarn run flow"
+    "precommit": "lint-staged && yarn lint && yarn flow && yarn test"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
@@ -34,7 +34,6 @@
     "styled-components": "^2.1.0",
     "styled-components-theme": "^1.0.5",
     "styled-normalize": "^2.0.0",
-    "tape": "^4.8.0",
     "yaml-front-matter": "^3.4.0"
   },
   "devDependencies": {
@@ -57,10 +56,10 @@
     "eslint-plugin-react": "7.0.1",
     "flow-bin": "^0.51.1",
     "husky": "^0.13.4",
+    "jest": "^20.0.4",
     "lint-staged": "^3.6.1",
     "nodemon": "^1.11.0",
     "prettier": "^1.4.4",
-    "tape": "^4.8.0",
     "watch": "^1.0.2"
   },
   "lint-staged": {
