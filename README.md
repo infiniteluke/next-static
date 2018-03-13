@@ -6,9 +6,8 @@ __✨ Start static then go server rendered when you need to ✨__
 
 A simple static blog powered by [next.js](https://github.com/zeit/next.js).
 
-## Why
-* I found other SSG (Static Site Generator) to be too much for what I need
-* I wanted to be able to transition to a dynamic site easily if need be and next.js is a great existing SSR (Server Side Render) framework.
+## Before Using
+This repo could be a good starting place for your simple Next.js powered static site. That said, there are other options out there that are more extensible, well maintained, and  battle tested than this repo. Check them out: https://myles.github.io/awesome-static-generators/
 
 ## Getting Started
 * Fork this repo
